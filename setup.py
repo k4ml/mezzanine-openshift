@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='myblog',
-      version='1.0',
+      version='1.0.1',
       description='MyBlog - OpenShift App',
       author='Kamal Mustafa',
       author_email='example@example.com',
