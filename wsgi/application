@@ -1,6 +1,8 @@
 import os, sys
+
+here = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(here, 'myblog'))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'myblog.settings'
-sys.path.append(os.environ['OPENSHIFT_HOMEDIR'] + '/django/repo/wsgi/myblog')
 
 virtenv = os.environ['APPDIR'] + '/virtenv/'
 os.environ['PYTHON_EGG_CACHE'] = os.path.join(virtenv, 'lib/python2.6/site-packages')
