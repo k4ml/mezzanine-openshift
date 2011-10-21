@@ -5,6 +5,10 @@
 # development version of Mezzanine is used rather than the installed version.
 import os
 import sys
+
+wsgi_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
+sys.path.insert(0, wsgi_path)
+
 project_path = os.path.dirname(os.path.abspath(__file__))
 project_dir = project_path.split(os.sep)[-1]
 if project_dir == "project_template":
