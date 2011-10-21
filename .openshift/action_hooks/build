@@ -4,6 +4,11 @@
 # before the deploy step.  This script gets executed directly, so it
 # could be python, php, ruby, etc.
 
+export PATH=$PATH:~/$OPENSHIFT_APP_NAME/virtenv/bin/
+APP=myblog
+
+source ~/$OPENSHIFT_APP_NAME/virtenv/bin/activate
+
 if [ ! -f $OPENSHIFT_DATA_DIR/sqlite3.db ]
 then
     echo "Copying ${OPENSHIFT_REPO_DIR}wsgi/myblog/sqlite3.db to $OPENSHIFT_DATA_DIR"
