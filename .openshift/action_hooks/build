@@ -15,5 +15,5 @@ then
     cp ${OPENSHIFT_REPO_DIR}wsgi/myblog/sqlite3.db $OPENSHIFT_DATA_DIR/
 else
     echo "Executing 'python ${OPENSHIFT_REPO_DIR}wsgi/myblog/manage.py syncdb --noinput'"
-    python ${OPENSHIFT_REPO_DIR}wsgi/myblog/manage.py --noinput
+    python ${OPENSHIFT_REPO_DIR}wsgi/myblog/manage.py syncdb --noinput
 fi
