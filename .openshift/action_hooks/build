@@ -11,9 +11,9 @@ source ~/$OPENSHIFT_APP_NAME/virtenv/bin/activate
 
 if [ ! -f $OPENSHIFT_DATA_DIR/sqlite3.db ]
 then
-    echo "Copying ${OPENSHIFT_REPO_DIR}wsgi/myblog/sqlite3.db to $OPENSHIFT_DATA_DIR"
-    cp ${OPENSHIFT_REPO_DIR}wsgi/myblog/sqlite3.db $OPENSHIFT_DATA_DIR/
+    echo "Copying ${OPENSHIFT_REPO_DIR}libs/${APP}/sqlite3.db to $OPENSHIFT_DATA_DIR"
+    cp ${OPENSHIFT_REPO_DIR}libs/${APP}/sqlite3.db $OPENSHIFT_DATA_DIR/
 else
-    echo "Executing 'python ${OPENSHIFT_REPO_DIR}wsgi/myblog/manage.py syncdb --noinput'"
-    python ${OPENSHIFT_REPO_DIR}wsgi/myblog/manage.py syncdb --noinput
+    echo "Executing 'python ${OPENSHIFT_REPO_DIR}libs/${APP}/manage.py syncdb --noinput'"
+    python ${OPENSHIFT_REPO_DIR}libs/${APP}/manage.py syncdb --noinput
 fi
