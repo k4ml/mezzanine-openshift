@@ -1,7 +1,7 @@
 import os, sys
 
-here = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(here, 'myblog'))
+lib_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../libs'))
+sys.path.insert(0, os.path.join(lib_path, 'myblog'))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'myblog.settings'
 
 virtenv = os.environ['APPDIR'] + '/virtenv/'
